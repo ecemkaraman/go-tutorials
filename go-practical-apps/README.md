@@ -1,16 +1,25 @@
 ```
 /go-practical-apps
-│── main.go
-│── cli
-│   ├── cli_tool.go
-│── api
-│   ├── rest_api.go
-│── scraper
-│   ├── web_scraper.go
-│── caching
-│   ├── cache.go
-│── worker
-│   ├── worker_pool.go
+│── main.go                   # Entry point of the project
+│── go.mod                    # Module file for dependencies
+│── go.sum                    # Checksum for dependencies
+│── README.md                 # Project documentation
+│
+│── cli/                      # 🛠 CLI Tool
+│   ├── cli_tool.go           # CLI implementation using flag package
+│
+│── api/                      # 🌐 REST API
+│   ├── rest_api.go           # REST API implementation with net/http
+│
+│── scraper/                  # 🕸 Web Scraper
+│   ├── web_scraper.go        # Scrapes web pages for links
+│
+│── caching/                  # 💾 Caching Mechanism
+│   ├── cache.go              # In-memory cache with sync.RWMutex
+│
+│── worker/                   # ⚡ Worker Pool
+│   ├── worker_pool.go        # Concurrency with Goroutines & Channels
+
 ```
 
 ### **🚀 Summary**
