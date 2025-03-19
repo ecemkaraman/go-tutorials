@@ -1,2 +1,0 @@
-Hello, Go! This is a new file.
-Appending new content.

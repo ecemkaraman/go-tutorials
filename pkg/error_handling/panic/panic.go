@@ -3,7 +3,7 @@ package errorhandling
 import "fmt"
 
 // Runs panic & recover example
-func RunPanicRecover() {
+func RunPanic() {
 	defer func() {
 		if r := recover(); r != nil {
 			fmt.Println("🛑 Recovered from Panic:", r)

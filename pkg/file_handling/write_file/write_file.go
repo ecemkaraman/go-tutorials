@@ -6,7 +6,7 @@ import (
 )
 
 // Runs file writing example
-func RunWriteFile() {
+func Run() {
 	content := "Hello, Go! This is a new file."
 
 	// ✅ Write content to file

@@ -6,7 +6,7 @@ import (
 )
 
 // Runs file appending example
-func RunAppendFile() {
+func Run() {
 	content := "\nAppending new content."
 
 	// ✅ Open file in append mode
