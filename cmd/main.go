@@ -71,9 +71,12 @@ func main() {
 	case 6:
 		goroutines.Run()
 	case 7:
-		channels.Run()
+		channels.RunBufferedChannel()
+		channels.RunUnbufferedChannel()
 	case 8:
-		sync.Run()
+		sync.RunMutex()
+		sync.RunRWMutex()
+		sync.RunWaitGroup()
 	case 9:
 		errorhandling.RunErrors()
 	case 10:
