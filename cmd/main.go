@@ -12,8 +12,9 @@ import (
 	"github.com/ecemkaraman/go-tutorials/pkg/data_structures/pointers"
 	"github.com/ecemkaraman/go-tutorials/pkg/data_structures/slices"
 	"github.com/ecemkaraman/go-tutorials/pkg/data_structures/structs"
-	"github.com/ecemkaraman/go-tutorials/pkg/error_handling/errorhandling"
-	"github.com/ecemkaraman/go-tutorials/pkg/file_handling/filehandling"
+	filehandling "github.com/ecemkaraman/go-tutorials/pkg/file_handling/append_file"
+	filehandling "github.com/ecemkaraman/go-tutorials/pkg/file_handling/read_file"
+	filehandling "github.com/ecemkaraman/go-tutorials/pkg/file_handling/write_file"
 	"github.com/ecemkaraman/go-tutorials/pkg/networking_security/http_client"
 	"github.com/ecemkaraman/go-tutorials/pkg/networking_security/json"
 	"github.com/ecemkaraman/go-tutorials/pkg/networking_security/security"
@@ -79,6 +80,7 @@ func main() {
 		sync.RunWaitGroup()
 	case 9:
 		errorhandling.RunErrors()
+		errorhandling.RunPanic()
 	case 10:
 		errorhandling.RunPanic()
 	case 11:
