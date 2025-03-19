@@ -1,3 +1,4 @@
+```
 /data-structures
  ├── main.go                # Entry point (calls other packages)
  ├── go.mod                 # Go module definition
@@ -9,3 +10,4 @@
  │   ├── maps.go            # Key-value storage
  ├── /structs
  │   ├── structs.go         # Custom data types & methods
+ ```
