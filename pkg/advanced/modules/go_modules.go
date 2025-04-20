@@ -2,8 +2,7 @@ package modules
 
 import (
 	"fmt"
-
-	_ "golang.org/x/text/language" // Example external package
+	_ "golang.org/x/text/language" // Example external package, need to install-> go get golang.org/x/text/language
 )
 
 // Runs Go Modules Example

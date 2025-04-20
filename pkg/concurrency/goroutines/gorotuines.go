@@ -14,7 +14,7 @@ func printMessage(msg string) {
 }
 
 // Runs Goroutine Example
-func RunGoroutines() {
+func Run() {
 	go printMessage("🔥 Goroutine 1")
 	go printMessage("⚡ Goroutine 2")
 

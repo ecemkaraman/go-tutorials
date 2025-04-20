@@ -16,7 +16,7 @@ func (e *CustomError) Error() string {
 }
 
 // Runs custom error example
-func Run() {
+func RunCustomErrors() {
 	err := &CustomError{Code: 404, Message: "Resource Not Found"}
 	fmt.Println(err) // Implicitly calls Error()
 }

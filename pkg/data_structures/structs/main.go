@@ -1,4 +1,4 @@
-package structs
+package main
 
 import "fmt"
 
@@ -16,7 +16,7 @@ type Employee struct {
 }
 
 // PracticeStructs demonstrates struct usage
-func PracticeStructs() {
+func main() {
 	fmt.Println("\n🔹 Structs in Go (Custom Data Types)")
 
 	// ✅ 1. Basic Struct Usage

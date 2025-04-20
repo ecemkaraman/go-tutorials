@@ -9,7 +9,7 @@ import (
 )
 
 // Runs HTTP GET & POST requests
-func RunHTTPClient() {
+func Run() {
 	// ✅ GET Request
 	response, err := http.Get("http://localhost:8080/get")
 	if err != nil {

@@ -1,90 +1,78 @@
-package arrays
+package main
 
 import "fmt"
 
-// PracticeArrays demonstrates common array usage scenarios
-func Run() {
+func main() {
 	fmt.Println("\n🔹 Arrays in Go (Fixed-Size Storage)")
 	// ✅ 1. Declaration & Initialization
-	// 1️⃣ Declare an array without initializing (defaults to zero values)
-	var arr1 [5]int
+	var arr1 [5]int                     //declares array of 5 ints with default 0s, no initialization
 	fmt.Println("Default array:", arr1) // [0 0 0 0 0]
 
-	// 2️⃣ Declare and initialize explicitly
-	var arr2 = [3]int{10, 20, 30}
+	var arr2 = [3]int{10, 20, 30}                      // Declare and initialize explicitly
 	fmt.Println("Explicitly initialized array:", arr2) // [10 20 30]
 
-	// 3️⃣ Short declaration with `:=`
-	arr3 := [4]int{1, 2, 3, 4}
+	arr3 := [4]int{1, 2, 3, 4}              //Short declaration with `:=`
 	fmt.Println("Short declaration:", arr3) // [1 2 3 4]
 
-	// 4️⃣ Let the compiler infer the size using `...`
-	arr4 := [...]int{5, 10, 15, 20, 25}
+	arr4 := [...]int{5, 10, 15, 20, 25}    //size inferred using ...
 	fmt.Println("Auto-sized array:", arr4) // [5 10 15 20 25]
 
-	// 5️⃣ Initialize specific indexes
-	arr5 := [5]int{0: 100, 3: 200}               // Only sets index 0 and 3, others remain 0
+	arr5 := [5]int{0: 100, 3: 200}               // Initializes specific indices only->only sets index 0 and 3
 	fmt.Println("Partial initialization:", arr5) // [100 0 0 200 0]
 
-	// 6️⃣ Using a loop to initialize an array
-	var arr6 [5]int
+	var arr6 [5]int // Initialize an array via loop
 	for i := 0; i < len(arr6); i++ {
 		arr6[i] = i * 10 // Assign values dynamically
 	}
 	fmt.Println("Loop-initialized array:", arr6) // [0 10 20 30 40]
 
-	// 7️⃣ Iterating over an array using range
-	fmt.Print("Using range loop: ")
+	fmt.Print("Using range loop: ") //Iterating over an array using range
 	for index, value := range arr6 {
 		fmt.Printf("Index %d -> Value %d | ", index, value)
 	}
+
+	// ---------------------------------------------------------
 	fmt.Println() // New line for formatting
 	arr := [5]int{1, 2, 3, 4, 5}
 	fmt.Println("Array:", arr)
-	// ---------------------------------------------------------
+
 	// ✅ 2. Indexed Access
 	fmt.Println("First Element:", arr[0])
 	fmt.Println("Last Element:", arr[len(arr)-1])
 
 	// ✅ 3. Iterating Over an Array
-	for i, v := range arr {
-		fmt.Printf("Index %d → Value %d\n", i, v)
+	for index, value := range arr {
+		fmt.Printf("Index %d → Value %d\n", index, value)
 	}
 
 	// ✅ 4. Modifying Elements
 	arr[2] = 99
 	fmt.Println("Updated Array:", arr)
 
-	// ✅ 5. Array Length
+	// ✅ 5. Array Utility Functions
 	fmt.Println("Array Length:", len(arr))
 
-	// ✅ 6. Array Slicing
-	slice := arr[1:4]
+	slice := arr[1:4] //Array Slicing -> [2 3 4]
 	fmt.Println("Array Slice:", slice)
 
-	// ✅ 7. Array Copy
-	copyArr := arr
+	copyArr := arr // Array Copy (Shallow Copy, not a reference)
 
-	// ✅ 8. Array Comparison
-	fmt.Println("Are arrays equal?", arr == copyArr)
+	fmt.Println("Are arrays equal?", arr == copyArr) //Element-wise comparison
 
-	// ✅ 9. Multi-Dimensional Arrays
+	// ✅ 6. Advanced Use Cases
+	// Multi-Dimensional Arrays
 	matrix := [2][2]int{{1, 2}, {3, 4}}
 	fmt.Println("Matrix:", matrix)
 
-	// ✅ 10. Array of Arrays
-	arrays := [2][2]int{{1, 2}, {3, 4}}
-	fmt.Println("Array of Arrays:", arrays)
-
-	// ✅ 11. Array of Slices
-	slices := [2][]int{{1, 2}, {3, 4}}
+	// Array of Slices
+	slices := [2][]int{{1, 2}, {3, 4}} //len(arr)=2, len(slice)=dynamic ([])
 	fmt.Println("Array of Slices:", slices)
 
-	// ✅ 12. Array of Maps
+	// Array of Maps
 	maps := [2]map[string]int{{"Alice": 30}, {"Bob": 25}}
 	fmt.Println("Array of Maps:", maps)
 
-	// ✅ 13. Array of Structs
+	// Array of Structs
 	type Person struct {
 		Name string
 		Age  int

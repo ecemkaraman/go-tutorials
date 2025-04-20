@@ -26,6 +26,7 @@ import (
 	"github.com/ecemkaraman/go-tutorials/pkg/practical_apps/worker"
 )
 
+// This is for future use of entry points into reusable packages for Go
 func main() {
 	fmt.Println("Select a topic to run:")
 	fmt.Println("1 - Arrays")

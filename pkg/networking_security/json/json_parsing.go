@@ -12,7 +12,7 @@ type User struct {
 }
 
 // Runs JSON Encoding & Decoding Example
-func RunJSONParsing() {
+func Run() {
 	// ✅ Encode Struct to JSON
 	user := User{Name: "Ecem", Email: "ecem@example.com"}
 	jsonData, _ := json.Marshal(user)

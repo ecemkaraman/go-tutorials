@@ -6,7 +6,7 @@ import (
 )
 
 // Runs file reading example
-func Run() {
+func RunReadFile() {
 	// ✅ Open and read file content
 	data, err := os.ReadFile("sample.txt")
 	if err != nil {
