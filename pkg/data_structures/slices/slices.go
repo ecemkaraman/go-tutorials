@@ -1,8 +1,8 @@
-package main
+package slices
 
 import "fmt"
 
-func main() {
+func Run() {
 	fmt.Println("🔹 Slices in Go (Dynamic, Resizable Views over Arrays)")
 
 	// ✅ Empty slice (zero length, nil by default)
@@ -28,7 +28,7 @@ func main() {
 	s4 := s2[2:5] // [3, 4, 5]
 	fmt.Println("Slice from slice:", s4)
 
-	// ✅ Using make(): length = 3, capacity = 5 (optional) 
+	// ✅ Using make(): length = 3, capacity = 5 (optional)
 	s5 := make([]int, 3, 5)
 	s5[0], s5[1], s5[2] = 7, 8, 9
 	fmt.Println("Slice with make():", s5, "Len:", len(s5), "Cap:", cap(s5))

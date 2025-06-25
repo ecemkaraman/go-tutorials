@@ -1,11 +1,11 @@
-package main
+package pointers
 
 import (
 	"fmt"
 )
 
 // Run executes all pointer examples
-func main() {
+func Run() {
 	fmt.Println("🔹 Pointers in Go: Demonstration")
 
 	// 1️⃣ Basic Pointer Declaration

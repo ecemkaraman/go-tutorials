@@ -1,8 +1,8 @@
-package main
+package maps
 
 import "fmt"
 
-func main() {
+func Run() {
 	fmt.Println("\n🔹 Maps in Go (Key-Value Storage)")
 
 	// ✅ 1. Basic Map Declaration
