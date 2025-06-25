@@ -6,73 +6,106 @@ Playground for Golang
 
 A **comprehensive Go repository** covering **core language features, concurrency, networking, security, interfaces, error handling, advanced topics, and practical applications.**
 ```
-/go-tutorials
-│── go.mod                            # Go module file
-│── go.sum                            # Dependency checksum
-│── README.md                         # Main project documentation
+go-tutorials/
+├── cmd/                                 # 🚀 Central Runner
+│   └── main.go                          # CLI-based entrypoint to explore all modules interactively
+
+├── go.mod                               # 📦 Go module file
+
+├── pkg/                                 # 🧱 Main Go Codebase
 │
-│── go-core/                           # 🟢 Go Core Features
-│   ├── variables.go                   # Variables & Data Types
-│   ├── operators.go                   # Operators & Expressions
-│   ├── control_flow.go                 # If, Switch, Loops
-│   ├── functions.go                    # Functions & Recursion
-│   ├── README.md                       # Documentation
+│── advanced/                            # 🔥 Advanced Go Topics
+│   ├── reflection/                      # Using the reflect package
+│   │   └── reflection.go
+│   ├── concurrency/                     # Managing Goroutines with context
+│   │   └── context.go
+│   ├── memory/                          # Memory optimization strategies
+│   │   └── sync_pool.go
+│   ├── modules/                         # Creating and using Go modules
+│   │   └── go_modules.go
+│   ├── testing/                         # Benchmarking with testing.B
+│   │   └── benchmark_test.go
+│   └── run.go                           # Entrypoint for advanced topics
 │
-│── go-data-structures/                # 🔹 Data Structures
-│   ├── arrays.go                       # Arrays
-│   ├── slices.go                       # Slices
-│   ├── maps.go                         # Maps
-│   ├── structs.go                      # Structs
-│   ├── pointers.go                     # Pointers
-│   ├── README.md                       # Documentation
+│── concurrency/                         # ⚡ Concurrency & Parallelism
+│   ├── goroutines/                      # Goroutine basics and launching
+│   │   └── goroutines.go
+│   ├── channels/                        # Communication through channels
+│   │   ├── buffered.go                  # Buffered channel example
+│   │   ├── unbuffered.go                # Unbuffered channel example
+│   │   └── run.go                       # Unified entrypoint for channels
+│   ├── sync/                            # sync tools for coordination
+│   │   ├── mutex.go                     # sync.Mutex demo
+│   │   ├── rwmutex.go                   # sync.RWMutex demo
+│   │   ├── waitgroup.go                 # sync.WaitGroup demo
+│   │   └── run.go                       # Unified entrypoint for sync
 │
-│── go-concurrency/                    # ⚡ Concurrency & Goroutines
-│   ├── goroutines.go                   # Goroutines Basics
-│   ├── channels.go                     # Channels
-│   ├── buffered_channels.go            # Buffered vs Unbuffered
-│   ├── waitgroups.go                   # sync.WaitGroup
-│   ├── mutex.go                         # sync.Mutex & RWMutex
-│   ├── README.md                        # Documentation
+│── control_flow/                        # 🔄 Control Structures
+│   └── controlflow.go                   # If, switch, and loops demo
 │
-│── go-networking-security/            # 🔒 Networking & Security
-│   ├── http_server.go                   # HTTP Server
-│   ├── http_client.go                   # GET & POST Requests
-│   ├── json_parsing.go                  # JSON Parsing
-│   ├── hashing.go                        # SHA-256 & HMAC
-│   ├── rsa_keys.go                       # RSA Key Generation
-│   ├── README.md                         # Documentation
+│── data_structures/                    # 🧊 Core Data Structures
+│   ├── arrays/                          # Fixed-size indexed storage
+│   │   └── arrays.go
+│   ├── slices/                          # Dynamic, resizable arrays
+│   │   └── slices.go
+│   ├── maps/                            # Key-value store
+│   │   └── maps.go
+│   ├── structs/                         # Custom types and methods
+│   │   └── structs.go
+│   ├── pointers/                        # Working with memory addresses
+│   │   └── pointers.go
+│   ├── strings/                         # String operations and tricks
+│   │   └── strings.go
+│   └── run.go                           # Entrypoint to run all data structure demos
 │
-│── go-interfaces-polymorphism/        # 🎭 Interfaces & Polymorphism
-│   ├── interfaces.go                    # Defining & Implementing Interfaces
-│   ├── polymorphism.go                   # Interface-based Polymorphism
-│   ├── type_assertions.go                # Type Assertions & Switches
-│   ├── README.md                         # Documentation
+│── error_handling/                     # 🚨 Error Handling in Go
+│   ├── standard_errors.go               # Basic errors.New and fmt.Errorf
+│   ├── custom_errors.go                 # Defining custom error types
+│   ├── panic.go                         # Panic & recover mechanisms
+│   └── run.go                           # Unified error handling entrypoint
 │
-│── go-error-file-handling/            # 🚨 Error & File Handling
-│   ├── errors.go                        # errors.New() & fmt.Errorf()
-│   ├── panic_recover.go                 # Panic & Recover
-│   ├── custom_errors.go                 # Custom Error Types
-│   ├── file_reading.go                  # os.Open(), ioutil.ReadFile()
-│   ├── file_writing.go                  # os.Create(), ioutil.WriteFile()
-│   ├── file_appending.go                # os.OpenFile() Append Mode
-│   ├── README.md                         # Documentation
+│── file_handling/                      # 📁 Working with Files
+│   ├── read_file.go                     # Reading with os and ioutil
+│   ├── write_file.go                    # Writing to files
+│   ├── append_file.go                   # Appending to files using os.OpenFile
+│   └── run.go                           # Entry point to run all file operations
 │
-│── go-advanced/                        # 🔥 Advanced Go Topics
-│   ├── reflection.go                    # Using the reflect package
-│   ├── context.go                        # Managing Goroutines with Context
-│   ├── sync_pool.go                      # Memory Optimization with sync.Pool
-│   ├── benchmarking.go                   # Benchmarking with testing.B
-│   ├── modules.go                        # Creating & Using Modules
-│   ├── README.md                         # Documentation
+│── interfaces/                         # 🎭 Interfaces & Polymorphism
+│   ├── basic_interface.go               # Defining and using interfaces
+│   ├── interface_as_param.go            # Passing interfaces as function parameters
+│   ├── empty_interface.go               # `interface{}` and type safety
+│   ├── type_assertions.go               # Safe type assertions
+│   ├── type_switch.go                   # Handling multiple types via switch
+│   └── run.go                           # Entrypoint for interface demos
 │
-│── go-practical-apps/                   # 🛠 Practical Go Applications
-│   ├── cli_tool.go                       # Building CLI Tool with flag & cobra
-│   ├── rest_api.go                        # Creating a REST API
-│   ├── web_scraper.go                     # Web Scraper using net/html
-│   ├── caching.go                         # Caching Mechanism with map & sync.RWMutex
-│   ├── worker_pool.go                      # Worker Pool with Goroutines & Channels
-│   ├── README.md                           # Documentation
+│── networking_security/               # 🔒 Networking & Security
+│   ├── http_client/                    # HTTP GET/POST requests
+│   │   └── get_post.go
+│   ├── json/                           # Working with JSON
+│   │   └── json_parsing.go
+│   ├── security/                       # Cryptography tools
+│   │   ├── hashing.go                  # SHA-256, HMAC
+│   │   ├── rsa_keys.go                 # RSA keypair generation
+│   │   └── run.go                      # Unified crypto demo entrypoint
+│   ├── server/                         # Serving content over HTTP
+│   │   └── server.go
+│
+│── practical_apps/                    # 🛠 Practical Applications
+│   ├── cli/                            # Building CLI tools with `flag`
+│   │   └── cli_tool.go
+│   ├── api/                            # Building a REST API with `net/http`
+│   │   └── rest_api.go
+│   ├── scraper/                        # Basic web scraper using `net/html`
+│   │   └── web_scraper.go
+│   ├── caching/                        # In-memory cache with sync.RWMutex
+│   │   └── cache.go
+│   ├── worker/                         # Worker pool pattern with channels
+│   │   └── worker_pool.go
+│   └── run.go                          # Entrypoint to run practical app demos
 ```
+
+
+
 
 ## **📌 How to Use**
 
