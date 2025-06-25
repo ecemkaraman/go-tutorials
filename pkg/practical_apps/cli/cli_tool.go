@@ -6,7 +6,7 @@ import (
 )
 
 // ✅ CLI Tool using `flag`
-func RunCLI() {
+func Run() {
 	name := flag.String("name", "User", "Your name")
 	age := flag.Int("age", 25, "Your age")
 	flag.Parse()

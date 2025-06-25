@@ -26,7 +26,7 @@ func handlePost(w http.ResponseWriter, r *http.Request) {
 }
 
 // Start HTTP Server
-func StartServer() {
+func Run() {
 	http.HandleFunc("/get", handleGet)
 	http.HandleFunc("/post", handlePost)
 

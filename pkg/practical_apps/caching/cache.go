@@ -33,7 +33,7 @@ func (c *Cache) Get(key string) (string, bool) {
 }
 
 // ✅ Run Cache Example
-func RunCache() {
+func Run() {
 	cache := NewCache()
 	cache.Set("username", "Ecem")
 

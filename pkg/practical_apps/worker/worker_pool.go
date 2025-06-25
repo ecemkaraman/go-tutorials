@@ -17,7 +17,7 @@ func worker(id int, jobs <-chan int, results chan<- int, wg *sync.WaitGroup) {
 }
 
 // ✅ Run Worker Pool
-func RunWorkerPool() {
+func Run() {
 	numWorkers := 3
 	numJobs := 5
 

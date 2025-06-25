@@ -13,7 +13,7 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 // ✅ Start an HTTP server
-func StartServer() {
+func Run() {
 	http.HandleFunc("/hello", helloHandler)
 	fmt.Println("Server running on http://localhost:8080")
 	http.ListenAndServe(":8080", nil)

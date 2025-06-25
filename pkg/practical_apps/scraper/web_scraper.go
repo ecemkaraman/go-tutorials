@@ -32,7 +32,7 @@ func extractLinks(url string) {
 }
 
 // ✅ Run Web Scraper
-func RunScraper() {
+func Run() {
 	fmt.Println("Scraping example.com for links...")
 	extractLinks("https://example.com")
 }
