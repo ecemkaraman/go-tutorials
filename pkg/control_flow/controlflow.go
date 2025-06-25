@@ -1,8 +1,8 @@
-package main
+package controlflow
 
 import "fmt"
 
-func main() {
+func Run() {
 	fmt.Println("\n🔹 Control Flow Practice in Go")
 
 	// ✅ If-Else
