@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/ecemkaraman/go-tutorials/pkg/basics"
 	"github.com/ecemkaraman/go-tutorials/pkg/concurrency/channels"
 	"github.com/ecemkaraman/go-tutorials/pkg/concurrency/goroutines"
 	"github.com/ecemkaraman/go-tutorials/pkg/concurrency/sync"
@@ -28,6 +29,7 @@ import (
 // This is for future use of entry points into reusable packages for Go
 func main() {
 	fmt.Println("Select a topic to run:")
+	fmt.Println("0 - Go Basics")
 	fmt.Println("1 - Arrays")
 	fmt.Println("2 - Maps")
 	fmt.Println("3 - Slices")
@@ -57,6 +59,8 @@ func main() {
 	}
 
 	switch choice {
+	case 0:
+		basics.Run()
 	case 1:
 		arrays.Run()
 	case 2:
