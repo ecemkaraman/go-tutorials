@@ -12,9 +12,8 @@ import (
 	"github.com/ecemkaraman/go-tutorials/pkg/data_structures/pointers"
 	"github.com/ecemkaraman/go-tutorials/pkg/data_structures/slices"
 	"github.com/ecemkaraman/go-tutorials/pkg/data_structures/structs"
-	filehandling "github.com/ecemkaraman/go-tutorials/pkg/file_handling/append_file"
-	filehandling "github.com/ecemkaraman/go-tutorials/pkg/file_handling/read_file"
-	filehandling "github.com/ecemkaraman/go-tutorials/pkg/file_handling/write_file"
+	errorhandling "github.com/ecemkaraman/go-tutorials/pkg/error_handling"
+	filehandling "github.com/ecemkaraman/go-tutorials/pkg/file_handling"
 	"github.com/ecemkaraman/go-tutorials/pkg/networking_security/http_client"
 	"github.com/ecemkaraman/go-tutorials/pkg/networking_security/json"
 	"github.com/ecemkaraman/go-tutorials/pkg/networking_security/security"
@@ -38,18 +37,16 @@ func main() {
 	fmt.Println("7 - Channels")
 	fmt.Println("8 - Mutex & Sync")
 	fmt.Println("9 - Errors Handling")
-	fmt.Println("10 - Panic & Recover")
-	fmt.Println("11 - Read File")
-	fmt.Println("12 - Write File")
-	fmt.Println("13 - HTTP Client")
-	fmt.Println("14 - JSON Parsing")
-	fmt.Println("15 - Security")
-	fmt.Println("16 - HTTP Server")
-	fmt.Println("17 - REST API")
-	fmt.Println("18 - Caching")
-	fmt.Println("19 - CLI Tool")
-	fmt.Println("20 - Web Scraper")
-	fmt.Println("21 - Worker Pool")
+	fmt.Println("10 - File Handling")
+	fmt.Println("11 - HTTP Client")
+	fmt.Println("12 - JSON Parsing")
+	fmt.Println("13 - Security")
+	fmt.Println("14 - HTTP Server")
+	fmt.Println("15 - REST API")
+	fmt.Println("16 - Caching")
+	fmt.Println("17 - CLI Tool")
+	fmt.Println("18 - Web Scraper")
+	fmt.Println("19 - Worker Pool")
 
 	var choice int
 	fmt.Print("Enter your choice: ")
@@ -73,40 +70,30 @@ func main() {
 	case 6:
 		goroutines.Run()
 	case 7:
-		channels.RunBufferedChannel()
-		channels.RunUnbufferedChannel()
+		channels.Run()
 	case 8:
-		sync.RunMutex()
-		sync.RunRWMutex()
-		sync.RunWaitGroup()
+		sync.Run()
 	case 9:
-		errorhandling.RunErrors()
-		errorhandling.RunPanic()
+		errorhandling.Run()
 	case 10:
-		errorhandling.RunPanic()
+		filehandling.Run()
 	case 11:
-		filehandling.RunReadFile()
-	case 12:
-		filehandling.RunWriteFile()
-	case 13:
 		http_client.Run()
-	case 14:
+	case 12:
 		json.Run()
+	case 13:
+		security.Run()
+	case 14:
+		server.Run()
 	case 15:
-		security.RunSHA256Hash()
-		security.RunHMACHash()
-		security.RunRSAKeyGen()
-	case 16:
-		server.StartServer()
-	case 17:
 		api.Run()
-	case 18:
+	case 16:
 		caching.Run()
-	case 19:
+	case 17:
 		cli.Run()
-	case 20:
+	case 18:
 		scraper.Run()
-	case 21:
+	case 19:
 		worker.Run()
 	default:
 		fmt.Println("Invalid choice. Please select a valid option.")

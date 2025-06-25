@@ -1,8 +1,8 @@
-package main
+package arrays
 
 import "fmt"
 
-func main() {
+func Run() {
 	fmt.Println("\n🔹 Arrays in Go (Fixed-Size Storage)")
 	// ✅ 1. Declaration & Initialization
 	var arr1 [5]int                     //declares array of 5 ints with default 0s, no initialization
