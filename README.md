@@ -130,23 +130,37 @@ cd go-tutorials
 
 ```
 
-### **🔹 3. Run Each Section Individually**
+### 🔹 3. Run the Central Interactive Runner
 
-You can **navigate into each folder** and run specific Go programs.
+This project uses a **single CLI interface** (`cmd/main.go`) to let you explore all topics interactively:
 
-### ✅ **Run Concurrency Examples**
-
-```
-cd go-concurrency
-go run goroutines.go
+```bash
+go run ./cmd
 
 ```
 
-### ✅ **Run Practical Applications**
+You'll be prompted with a list of topics like:
 
 ```
-cd go-practical-apps
-go run cli_tool.go
+1 - Arrays
+2 - Maps
+3 - Slices
+...
+18 - Web Scraper
+19 - Worker Pool
+
+```
+
+Enter the number to explore that concept.
+
+### 🔹 4. Optional: Run Specific Files for Quick Demos
+
+While `cmd/main.go` is the default interface, you can still run individual files manually for debugging or focused practice. Each folder with multiple files (e.g. channels, file_handling, security, etc.) has a run.go file that serves as a local entrypoint to consolidate related demos.
+
+✅ Example: Run Concurrency → Channels
+
+```bash
+go run pkg/concurrency/channels/run.go
 
 ```
 
